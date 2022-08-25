@@ -14,18 +14,18 @@ main:
     mov rbp, rsp; for correct debugging
  push rbp
  mov rbp,rsp
- mov rax, [number1] ; Передача чисел в регистры.
+ mov rax, [number1] 
  mov rbx, [number2]
- cmp rax,rbx ; Сравнение регистров rax и rbx.
- jge greater ; Если rax больше или равен, то перейти к метке greater:.
- mov rdi,fmt2 ; Если rax меньше, продолжить здесь.
- mov rax,0 ; Регистр xmm не используется.
- call printf ; Вывод строки fmt2.
- jmp exit ; Переход к метке exit:.
+ cmp rax,rbx 
+ jge greater 
+ mov rdi,fmt2 
+ mov rax,0 
+ call printf 
+ jmp exit 
 greater:
- mov rdi,fmt1 ; Регистр rax больше.
- mov rax,0 ; Регистр xmm не используется.
- call printf ; Вывод строки fmt1.
+ mov rdi,fmt1 
+ mov rax,0 
+ call printf 
 exit:
  mov rsp,rbp
  pop rbp
