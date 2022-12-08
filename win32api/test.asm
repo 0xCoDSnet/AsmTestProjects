@@ -1,7 +1,7 @@
 %include "io.inc"
 
-extern _ReadConsoleA@20
-extern _WriteConsoleA@20
+extern _ReadConsoleA@20 ; 20 - 5 args, 4 bytes - 1 args, => 5*4 = 20
+extern _WriteConsoleA@20 
 extern _GetStdHandle@4
 extern _ExitProcess@4
 extern _printf
